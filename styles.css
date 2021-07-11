@@ -1,0 +1,41 @@
+body, div { margin: 0; border: 0; padding: 0; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer, Edge */
+            user-select: none; /* Future */
+}
+
+body {
+  background-color: #131313;
+}
+
+#main {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #007C31;
+}
+
+#clock {
+  font-size: 22pt;
+  font-family: monospace;
+}
+#date {
+  font-size: 25pt;
+  font-family: monospace;
+  margin: 10pt;
+}
+#motd {
+  font-size: 13pt;
+  font-family: monospace;
+  margin-top: 20pt;
+}
