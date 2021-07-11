@@ -40,4 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //   .then(r => r.text())
   //   .then(data => { _id('motd').textContent = data; });
   // }
+  { _id('browser').textContent
+      = navigator.userAgent.match(/(?<=^|\s)(Chrom\S+\/\S+)/)[1];
+  }
 });

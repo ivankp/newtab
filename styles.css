@@ -39,3 +39,9 @@ body {
   font-family: monospace;
   margin-top: 20pt;
 }
+#browser {
+  position: fixed;
+  bottom: 8pt;
+  left: 8pt;
+  color: #007C31;
+}
