@@ -45,3 +45,10 @@ body {
   left: 8pt;
   color: #007C31;
 }
+#shortcuts {
+  position: fixed;
+  top: 8pt;
+  right: 8pt;
+  color: #007C31;
+  font-family: monospace;
+}
