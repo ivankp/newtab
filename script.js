@@ -78,12 +78,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("keypress", e => {
-  const x = shortcuts[e.key];
-  if (x) window.location.href = x[0].replace(/\/u\/\d\//,`/u/${u}/`);
-  else if (['0','1'].includes(e.key)) {
-    if (e.key!==u) {
-      u = e.key;
-      make_shortcuts();
+  if (e.key==='j') {
+    for (const x of [
+      'https://mail.google.com/mail/u/0/#inbox',
+      'https://mail.google.com/mail/u/1/#inbox',
+      'https://calendar.google.com/calendar/u/1/r/week'
+    ]) window.open(x,'_blank');
+    window.close();
+  } else if (e.key==='?') {
+    navigator.clipboard.readText().then( x => {
+      window.location.href =
+        'https://www.google.com/search?q='+encodeURIComponent(x);
+    });
+  } else {
+    const x = shortcuts[e.key];
+    if (x) window.location.href = x[0].replace(/\/u\/\d\//,`/u/${u}/`);
+    else if (['0','1'].includes(e.key)) {
+      if (e.key!==u) {
+        u = e.key;
+        make_shortcuts();
+      }
     }
   }
 });
