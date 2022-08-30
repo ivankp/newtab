@@ -30,6 +30,7 @@ const shortcuts = {
   'g': ['https://mail.google.com/mail/u/0/#inbox', 'gmail'],
   'c': ['https://calendar.google.com/calendar/u/0/r/week', 'calendar'],
   'd': ['https://docs.google.com/document/u/0/', 'documents'],
+  't': ['https://docs.google.com/spreadsheets/u/0/', 'sheets'],
   'l': ['https://www.linkedin.com/', 'linkedin'],
   'f': ['https://www.facebook.com/', 'facebook'],
   'm': ['https://www.facebook.com/messages/', 'messages'],
