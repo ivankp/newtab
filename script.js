@@ -20,6 +20,7 @@ function time(clock,date) {
   const m  = t.getMinutes();
   let   h  = t.getHours();
   const p  = h>12 ? (h-=12, 'pm') : 'am';
+  if (h === 0) h = 12;
   clock.textContent = `${h}:${m<10?'0':''}${m}${p}`;
   date .textContent =
     `${weekdays[t.getDay()]}, ${months[t.getMonth()]} ${t.getDate()}, ${t.getFullYear()}`;
@@ -30,15 +31,19 @@ const shortcuts = {
   'g': ['https://mail.google.com/mail/u/0/#inbox', 'gmail'],
   'c': ['https://calendar.google.com/calendar/u/0/r/week', 'calendar'],
   'd': ['https://docs.google.com/document/u/0/', 'documents'],
-  't': ['https://docs.google.com/spreadsheets/u/0/', 'sheets'],
-  'l': ['https://www.linkedin.com/', 'linkedin'],
-  'f': ['https://www.facebook.com/', 'facebook'],
-  'm': ['https://www.facebook.com/messages/', 'messages'],
-  'h': ['https://github.com/ivankp?tab=repositories', 'github'],
+  't': ['https://docs.google.com/spreadsheets/u/0/', 'tables'],
+  'l': ['https://www.linkedin.com/in/ivan-pogrebnyak/', 'linkedin'],
+  'F': ['https://www.facebook.com/', 'facebook'],
+  'f': ['https://www.facebook.com/messages/', 'messages'],
+  'h': ['https://github.com/ivankp', 'github'],
+  'H': ['https://github.com/ivankp?tab=repositories', 'github repos'],
   's': ['https://stackoverflow.com/users/2640636', 'stackoverflow'],
   'w': ['https://www.wolframalpha.com/', 'wolframalpha'],
   'u': ['https://www.youtube.com/', 'youtube'],
+  'U': ['https://www.youtube.com/feed/history', 'youtube history'],
   'i': ['https://images.google.com/', 'google images'],
+  'm': ['https://www.google.com/maps', 'google maps'],
+  'a': ['https://www.amazon.com/', 'amazon'],
   'z': ['https://zooescape.com/backgammon.pl?v=200&ng=1', 'zooescape'],
 };
 let u = '0';
@@ -79,14 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener("keypress", e => {
-  if (e.key==='j') {
+  /* if (e.key==='j') {
     for (const x of [
       'https://mail.google.com/mail/u/0/#inbox',
       'https://mail.google.com/mail/u/1/#inbox',
       'https://calendar.google.com/calendar/u/1/r/week'
     ]) window.open(x,'_blank');
     window.close();
-  } else if (e.key==='?') {
+  } else */
+  if (e.key==='?') {
     navigator.clipboard.readText().then( x => {
       window.location.href =
         'https://www.google.com/search?q='+encodeURIComponent(x);

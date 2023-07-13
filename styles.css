@@ -46,9 +46,10 @@ body {
   color: #007C31;
 }
 #shortcuts {
+  font-size: 10pt;
+  font-family: monospace;
   position: fixed;
   top: 8pt;
   right: 8pt;
   color: #007C31;
-  font-family: monospace;
 }
