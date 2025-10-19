@@ -28,23 +28,24 @@ function time(clock,date) {
 }
 
 const shortcuts = {
-  'g': ['https://mail.google.com/mail/u/0/#inbox', 'gmail'],
+  'm': ['https://mail.google.com/mail/u/0/#inbox', 'gmail'],
   'c': ['https://calendar.google.com/calendar/u/0/r/week', 'calendar'],
   'd': ['https://docs.google.com/document/u/0/', 'documents'],
   't': ['https://docs.google.com/spreadsheets/u/0/', 'tables'],
   'l': ['https://www.linkedin.com/in/ivan-pogrebnyak/', 'linkedin'],
   'F': ['https://www.facebook.com/', 'facebook'],
   'f': ['https://www.facebook.com/messages/', 'messages'],
-  'h': ['https://github.com/ivankp', 'github'],
-  'H': ['https://github.com/ivankp?tab=repositories', 'github repos'],
+  'g': ['https://github.com/ivankp', 'github'],
+  'G': ['https://github.com/ivankp?tab=repositories', 'github repos'],
   's': ['https://stackoverflow.com/users/2640636', 'stackoverflow'],
   'w': ['https://www.wolframalpha.com/', 'wolframalpha'],
   'u': ['https://www.youtube.com/', 'youtube'],
   'U': ['https://www.youtube.com/feed/history', 'youtube history'],
   'i': ['https://images.google.com/', 'google images'],
-  'm': ['https://www.google.com/maps', 'google maps'],
+  'M': ['https://www.google.com/maps', 'google maps'],
   'a': ['https://www.amazon.com/', 'amazon'],
   'z': ['https://zooescape.com/backgammon.pl?v=200&ng=1', 'zooescape'],
+  'h': ['https://home.nest.com', 'nest'],
 };
 let u = '0';
 function make_shortcuts() {
