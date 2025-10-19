@@ -1,6 +1,9 @@
 body, div { margin: 0; border: 0; padding: 0; }
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+    color: #3465a4;
+}
 a:hover { text-decoration: underline; }
 
 .noselect {
